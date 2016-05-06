@@ -1,16 +1,26 @@
-console.log("-- manager --");
+/*
+------------------------------------------------------------------------------
+				TASK MANAGER ANGULAR JS SCRIPT
+------------------------------------------------------------------------------
+*/
 
 // creating the module
 var myApp = 
 angular
-.module("myModule", [])
-.controller("myController", function($scope) {	
-	// passing data to angularjs object
-	$scope.message = "Task Manager Demo By Singh";
-	$scope.tasks = ["A1", "A2", "A3"];
+.module("taskModule", [])
+.controller("taskController", function($scope) {	
 
-	$scope.employee = { 
-		firstName: "Cool", 
-		lastName: "Guy",
-		age: 27};
+	$scope.message = "Task Manager Demo By Singh";
+
+	// some task objects
+	$scope.tasks = [
+		{ title: "Send email to John", completed: false},
+		{ title: "Buy jeans on weekend", completed: false},
+		];
+
+
+	// function to add new task
+	$scope.addTask = function() {
+		$scope.tasks.push({ title: $scope.new_task, completed: false});
+	}
 });
