@@ -44,7 +44,7 @@
 					<td>{{$index + 1}}.</td>
 					<td>{{ task.title }}</td>
 					<td>
-						<input class="btn-success" type="button" value="{{ task.completed ? 'Done' : 'Pending' }}" ng-click="task.completed = !task.completed">
+						<input type="image" src="{{ task.completed ? 'images/tick.png' : 'images/cross.png' }}" ng-click="task.completed = !task.completed" style="width:40px; height:40px;">
 					</td>
 				</tr>
 			</tbody>
