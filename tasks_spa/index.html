@@ -30,7 +30,7 @@
 		</form><br /><br />
 
 		<h4>Tasks</h4><hr />
-		
+
 		<table class="table table-striped">
 			<thead>
 				<tr class="success">
@@ -43,7 +43,9 @@
 				<tr ng-repeat="task in tasks">
 					<td>{{$index + 1}}.</td>
 					<td>{{ task.title }}</td>
-					<td>{{ task.completed }}</td>
+					<td>
+						<input class="btn-success" type="button" value="{{ task.completed ? 'Done' : 'Pending' }}" ng-click="task.completed = !task.completed">
+					</td>
 				</tr>
 			</tbody>
 		</table>
