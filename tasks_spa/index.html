@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html ng-app="myModule">
+<head>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="js/manager.js"></script>
+
+</head>
+<body>
+
+<div ng-controller="myController">
+ 	Message = {{ message }} <br>
+ 	Task 1 is {{ tasks [0] }} <br>
+ 	<br>
+ 	{{ employee.firstName }} {{ employee.lastName }} {{ employee.age }} years
+</div>
+
+</body>
+</html>
